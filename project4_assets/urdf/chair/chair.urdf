@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<robot name="free_10_chair_chair_z_up" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <link name="world" />
+
+    <link name="free_10_chair_chair_z_up">
+        <visual>
+          <origin rpy="0 0 0" xyz="-1.4934743642807007 -1.1367493867874146 -0.5242324471473694"/>
+          <geometry>
+             <mesh filename="2f0a94efe6d1da7f8616812464c86290_obj0_object.obj" scale="0.001 0.001 0.001"/>
+          </geometry>
+        </visual>
+        <collision>
+          <origin rpy="0 0 0" xyz="-1.4934743642807007 -1.1367493867874146 -0.5242324471473694"/>
+          <geometry>
+            <mesh filename="2f0a94efe6d1da7f8616812464c86290_obj0_object.obj" scale="0.001 0.001 0.001"/>
+          </geometry>
+        </collision>
+        <inertial>
+          <mass value="30.455"/>
+          <origin xyz="0 0 0"/>
+          <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_structure" type="fixed">
+        <origin xyz="1.750 -0.750 0.750" rpy="1.57079 0 0" />
+        <parent link="world" />
+        <child link="free_10_chair_chair_z_up" />
+    </joint>
+</robot>

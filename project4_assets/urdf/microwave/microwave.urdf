@@ -1,0 +1,73 @@
+
+<!--<?xml version="1.0"?>-->
+
+<robot name="microwave_robot" >
+
+    <link name="world" />
+
+
+<!-- microwave -->
+
+    <!-- microwave -->
+    <link name="microwave">
+        <inertial>
+            <origin xyz="0 0 0" />
+            <mass value="77.64931808314071" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" />
+            <geometry>
+                <mesh filename="none_motion.obj" rpy="0 0 0" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" />
+            <geometry>
+                <mesh filename="none_motion.obj" rpy="0 0 0" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint_structure" type="fixed">
+        <origin xyz="0.000 0.000 0.000" rpy="0 0 0" />
+        <parent link="world" />
+        <child link="microwave" />
+    </joint>
+
+
+    
+    <link name="dof_rootd_Aa001_r">
+        <inertial>
+            <origin xyz="-0.439551 0.474092 0.260048" />
+            <mass value="7.3607604453437325" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.439551 0.474092 0.260048" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa001_r.obj" rpy="0 0 0" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.439551 0.474092 0.260048" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa001_r.obj" rpy="0 0 0" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="dof_rootd_Aa001_r" type="revolute">
+        <origin xyz="0.439551 -0.474092 -0.260048" rpy="0 0 0" />
+        <parent link="microwave" />
+        <child link="dof_rootd_Aa001_r" />
+        <axis xyz="2.22045e-16 1.0 0.0" />
+        <dynamics friction="0.6587632323877184" />
+        <limit lower="0.0" upper="0.3325697648086246"/>
+    </joint>
+    
+        
+
+</robot>
+        

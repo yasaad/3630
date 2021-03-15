@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<robot name="led_tv_z_up" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <link name="world" />
+
+    <link name="led_tv_z_up">
+        <visual>
+            <origin rpy="0 0 0" xyz="-1.5575628280639648 1.7635917663574219 -0.9648744463920593"/>
+            <geometry>
+                <mesh filename="led_tv_z_up.obj"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5575628280639648 1.7635917663574219 -0.9648744463920593"/>
+            <geometry>
+                <mesh filename="led_tv_z_up.obj"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="30.455"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_structure" type="fixed">
+        <origin xyz="0.000 0.000 0.000" rpy="0 0 0" />
+        <parent link="world" />
+        <child link="led_tv_z_up" />
+    </joint>
+
+</robot>

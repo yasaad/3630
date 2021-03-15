@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot name="duckiebot">
+    <material name="black">
+        <color rgba="0.15 0.15 0.15 1.0" />
+    </material>
+    <material name="red">
+        <color rgba="0.85 0.25 0.25 1.0" />
+    </material>
+    <material name="grey">
+        <color rgba="0.55 0.55 0.55 1.0" />
+    </material>
+
+    <link name="base_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/chassis.dae" />
+            </geometry>
+            <material name="red" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/chassis.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="left_wheel_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/left_wheel.dae" />
+            </geometry>
+            <material name="grey" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/left_wheel.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="right_wheel_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right_wheel.dae" />
+            </geometry>
+            <material name="grey" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/right_wheel.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="camera_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/camera.dae" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/camera.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="caster_ball_link">
+        <contact>
+            <lateral_friction value="0.0"/>
+            <rolling_friction value="0.0"/>
+            <spinning_friction value="0.0"/>
+            <inertia_scaling value="10.0"/>
+
+            <!-- <contact_cfm value="0.0"/> -->
+            <!-- <contact_erp value="1.0"/> -->
+        </contact>
+        <inertial>
+        <origin
+            xyz="3.46944695195361E-18 0.009 0"
+            rpy="0 0 0" />
+        <mass
+            value="3.10359136400182873" />
+        <inertia
+            ixx="1.29648240466017E-07"
+            ixy="0"
+            ixz="0"
+            iyy="1.29648240466017E-07"
+            iyz="0"
+            izz="1.29648240466017E-07" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/caster_ball.dae" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="meshes/caster_ball.dae" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="left_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="left_wheel_link" />
+        <origin xyz="-0.000037 0.056684 -0.00025" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="right_wheel_joint" type="continuous">
+        <parent link="base_link" />
+        <child link="right_wheel_link" />
+        <origin xyz="-0.000037 -0.056684 -0.00025" rpy="0 0 0" />
+        <axis xyz="0 1 0" />
+    </joint>
+    <joint name="camera_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="camera_link" />
+        <origin xyz="0.059808 -0.000034 0.075251" rpy="0 0.261799 0" />
+    </joint>
+    <joint name="caster_joint" type="spherical">
+        <parent link="base_link" />
+        <child link="caster_ball_link" />
+        <origin xyz="-0.084845 0.000014 -0.027315" rpy="0 0 0" />
+        <axis xyz="0 0 0" />
+    </joint>
+</robot>

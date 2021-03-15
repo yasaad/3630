@@ -1,0 +1,24 @@
+# Blender MTL File: 'Rs_new_v1.blend'
+# Material Count: 2
+
+newmtl PVC_Fb_Black
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.3922 0.3922 0.3922
+Ks 1.000000 1.000000 1.000000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd led_tv_combined-min.png
+
+newmtl TV_screen
+Ns 534.145124
+Ka 1.000000 1.000000 1.000000
+Kd 0.500000 0.500000 0.500000
+Ks 0.555794 0.555794 0.555794
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd led_tv_combined-min.png

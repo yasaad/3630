@@ -1,0 +1,73 @@
+
+<!--<?xml version="1.0"?>-->
+
+<robot name="oven_robot" >
+
+    <link name="world" />
+
+
+<!-- oven -->
+
+    <!-- oven -->
+    <link name="oven">
+        <inertial>
+            <origin xyz="0 0 0" />
+            <mass value="66.12448480479905" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" />
+            <geometry>
+                <mesh filename="none_motion.obj" rpy="0 0 0" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" />
+            <geometry>
+                <mesh filename="none_motion.obj" rpy="0 0 0" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint_structure" type="fixed">
+        <origin xyz="0.000 0.000 0.000" rpy="0 0 0" />
+        <parent link="world" />
+        <child link="oven" />
+    </joint>
+
+
+    
+    <link name="dof_rootd_Aa001_r">
+        <inertial>
+            <origin xyz="-0.389925 0.487705 0.445677" />
+            <mass value="3.101469028123491" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.389925 0.487705 0.445677" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa001_r.obj" rpy="0 0 0" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.389925 0.487705 0.445677" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa001_r.obj" rpy="0 0 0" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="dof_rootd_Aa001_r" type="revolute">
+        <origin xyz="0.389925 -0.487705 -0.445677" rpy="0 0 0" />
+        <parent link="oven" />
+        <child link="dof_rootd_Aa001_r" />
+        <axis xyz="2.22045e-16 1.0 0.0" />
+        <dynamics friction="0.1863264422237521" />
+        <limit lower="0.0" upper="0.4851463696091111"/>
+    </joint>
+    
+        
+
+</robot>
+        

@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<robot name="backpack_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+
+    <link name="world" />
+
+    <link name="backpack_link">
+        <visual>
+            <origin rpy="0 0 0" xyz="-0.9468651413917542 -0.41371017694473267 -0.6280572414398193"/>
+            <geometry>
+                <mesh filename="AM159_054_z_up.obj"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="-0.9468651413917542 -0.41371017694473267 -0.6280572414398193"/>
+            <geometry>
+                <mesh filename="AM159_054_z_up.obj"/>
+            </geometry>
+        </collision>
+        <inertial>
+            <mass value="30.455"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="joint_structure" type="fixed">
+        <origin xyz="0.000 0.000 0.000" rpy="0 0 0" />
+        <parent link="world" />
+        <child link="backpack_link" />
+    </joint>
+
+</robot>

@@ -1,0 +1,103 @@
+
+<!--<?xml version="1.0"?>-->
+
+<robot name="refrigerator_robot" >
+
+    <link name="world" />
+
+
+<!-- refrigerator -->
+
+    <!-- refrigerator -->
+    <link name="refrigerator">
+        <inertial>
+            <origin xyz="0 0 0" />
+            <mass value="66.55810409914356" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" />
+            <geometry>
+                <mesh filename="none_motion.obj" rpy="0 0 0" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" />
+            <geometry>
+                <mesh filename="none_motion.obj" rpy="0 0 0" />
+            </geometry>
+        </collision>
+    </link>
+
+
+    <joint name="joint_structure" type="fixed">
+        <origin xyz="0.000 0.000 0.000" rpy="0 0 0" />
+        <parent link="world" />
+        <child link="refrigerator" />
+    </joint>
+
+
+    
+    <link name="dof_rootd_Aa001_r">
+        <inertial>
+            <origin xyz="-0.0120242 0.186991 0.258249" />
+            <mass value="3.4723016707927337" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.0120242 0.186991 0.258249" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa001_r.obj" rpy="0 0 0" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.0120242 0.186991 0.258249" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa001_r.obj" rpy="0 0 0" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="dof_rootd_Aa001_r" type="revolute">
+        <origin xyz="0.0120242 -0.186991 -0.258249" rpy="0 0 0" />
+        <parent link="refrigerator" />
+        <child link="dof_rootd_Aa001_r" />
+        <axis xyz="-0.00265158 -0.000674044 -0.999996" />
+        <dynamics friction="0.5867301641997079" />
+        <limit lower="-1.66" upper="0.8011998335445056"/>
+    </joint>
+    
+        
+    
+    <link name="dof_rootd_Aa002_r">
+        <inertial>
+            <origin xyz="-0.0111599 0.187214 -0.489751" />
+            <mass value="6.779880496514063" />
+            <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.0111599 0.187214 -0.489751" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa002_r.obj" rpy="0 0 0" />
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="-0.0111599 0.187214 -0.489751" />
+            <geometry>
+                <mesh filename="dof_rootd_Aa002_r.obj" rpy="0 0 0" />
+            </geometry>
+        </collision>
+    </link>
+
+    <joint name="dof_rootd_Aa002_r" type="revolute">
+        <origin xyz="0.0111599 -0.187214 0.489751" rpy="0 0 0" />
+        <parent link="refrigerator" />
+        <child link="dof_rootd_Aa002_r" />
+        <axis xyz="0.00129135 0.000292879 -0.999999" />
+        <dynamics friction="0.6519199645177302" />
+        <limit lower="-1.66" upper="1.231625295881653"/>
+    </joint>
+        
+
+</robot>
+        

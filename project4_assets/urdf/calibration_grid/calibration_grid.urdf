@@ -1,0 +1,1348 @@
+<?xml version="1.0" ?>
+<robot name="calibration_grid_robot" xmlns:xacro="http://ros.org/wiki/xacro">
+    <material name="black">
+        <color rgba="0 0 0 1" />
+    </material>
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <link name="world" />
+
+    <link name="grid8x6" />
+
+    <joint name="grid8x6_joint" type="fixed">
+        <origin xyz="0.0 0 0" rpy="1.57079 0 1.57079" />
+        <parent link="world" />
+        <child link="grid8x6" />
+    </joint>
+
+    <link name="square1x1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x1_joint" type="fixed">
+        <origin xyz="0.0 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x1_link" />
+    </joint>
+
+    <link name="square1x2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x2_joint" type="fixed">
+        <origin xyz="0.1 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x2_link" />
+    </joint>
+
+    <link name="square1x3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x3_joint" type="fixed">
+        <origin xyz="0.2 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x3_link" />
+    </joint>
+
+    <link name="square1x4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x4_joint" type="fixed">
+        <origin xyz="0.3 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x4_link" />
+    </joint>
+
+    <link name="square1x5_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x5_joint" type="fixed">
+        <origin xyz="0.4 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x5_link" />
+    </joint>
+
+    <link name="square1x6_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x6_joint" type="fixed">
+        <origin xyz="0.5 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x6_link" />
+    </joint>
+
+    <link name="square1x7_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x7_joint" type="fixed">
+        <origin xyz="0.6 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x7_link" />
+    </joint>
+
+    <link name="square1x8_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x8_joint" type="fixed">
+        <origin xyz="0.7 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x8_link" />
+    </joint>
+
+    <link name="square1x9_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square1x9_joint" type="fixed">
+        <origin xyz="0.8 0 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square1x9_link" />
+    </joint>
+
+
+    <link name="square2x1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x1_joint" type="fixed">
+        <origin xyz="0.0 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x1_link" />
+    </joint>
+
+    <link name="square2x2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x2_joint" type="fixed">
+        <origin xyz="0.1 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x2_link" />
+    </joint>
+
+    <link name="square2x3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x3_joint" type="fixed">
+        <origin xyz="0.2 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x3_link" />
+    </joint>
+
+    <link name="square2x4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x4_joint" type="fixed">
+        <origin xyz="0.3 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x4_link" />
+    </joint>
+
+    <link name="square2x5_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x5_joint" type="fixed">
+        <origin xyz="0.4 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x5_link" />
+    </joint>
+
+    <link name="square2x6_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x6_joint" type="fixed">
+        <origin xyz="0.5 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x6_link" />
+    </joint>
+
+    <link name="square2x7_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x7_joint" type="fixed">
+        <origin xyz="0.6 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x7_link" />
+    </joint>
+
+    <link name="square2x8_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x8_joint" type="fixed">
+        <origin xyz="0.7 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x8_link" />
+    </joint>
+
+    <link name="square2x9_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square2x9_joint" type="fixed">
+        <origin xyz="0.8 0.1 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square2x9_link" />
+    </joint>
+
+
+    <link name="square3x1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x1_joint" type="fixed">
+        <origin xyz="0.0 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x1_link" />
+    </joint>
+
+    <link name="square3x2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x2_joint" type="fixed">
+        <origin xyz="0.1 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x2_link" />
+    </joint>
+
+    <link name="square3x3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x3_joint" type="fixed">
+        <origin xyz="0.2 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x3_link" />
+    </joint>
+
+    <link name="square3x4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x4_joint" type="fixed">
+        <origin xyz="0.3 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x4_link" />
+    </joint>
+
+    <link name="square3x5_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x5_joint" type="fixed">
+        <origin xyz="0.4 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x5_link" />
+    </joint>
+
+    <link name="square3x6_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x6_joint" type="fixed">
+        <origin xyz="0.5 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x6_link" />
+    </joint>
+
+    <link name="square3x7_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x7_joint" type="fixed">
+        <origin xyz="0.6 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x7_link" />
+    </joint>
+
+    <link name="square3x8_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x8_joint" type="fixed">
+        <origin xyz="0.7 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x8_link" />
+    </joint>
+
+    <link name="square3x9_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square3x9_joint" type="fixed">
+        <origin xyz="0.8 0.2 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square3x9_link" />
+    </joint>
+
+
+    <link name="square4x1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x1_joint" type="fixed">
+        <origin xyz="0.0 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x1_link" />
+    </joint>
+
+    <link name="square4x2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x2_joint" type="fixed">
+        <origin xyz="0.1 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x2_link" />
+    </joint>
+
+    <link name="square4x3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x3_joint" type="fixed">
+        <origin xyz="0.2 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x3_link" />
+    </joint>
+
+    <link name="square4x4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x4_joint" type="fixed">
+        <origin xyz="0.3 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x4_link" />
+    </joint>
+
+    <link name="square4x5_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x5_joint" type="fixed">
+        <origin xyz="0.4 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x5_link" />
+    </joint>
+
+    <link name="square4x6_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x6_joint" type="fixed">
+        <origin xyz="0.5 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x6_link" />
+    </joint>
+
+    <link name="square4x7_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x7_joint" type="fixed">
+        <origin xyz="0.6 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x7_link" />
+    </joint>
+
+    <link name="square4x8_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x8_joint" type="fixed">
+        <origin xyz="0.7 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x8_link" />
+    </joint>
+
+    <link name="square4x9_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square4x9_joint" type="fixed">
+        <origin xyz="0.8 0.3 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square4x9_link" />
+    </joint>
+
+
+    <link name="square5x1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x1_joint" type="fixed">
+        <origin xyz="0.0 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x1_link" />
+    </joint>
+
+    <link name="square5x2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x2_joint" type="fixed">
+        <origin xyz="0.1 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x2_link" />
+    </joint>
+
+    <link name="square5x3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x3_joint" type="fixed">
+        <origin xyz="0.2 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x3_link" />
+    </joint>
+
+    <link name="square5x4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x4_joint" type="fixed">
+        <origin xyz="0.3 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x4_link" />
+    </joint>
+
+    <link name="square5x5_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x5_joint" type="fixed">
+        <origin xyz="0.4 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x5_link" />
+    </joint>
+
+    <link name="square5x6_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x6_joint" type="fixed">
+        <origin xyz="0.5 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x6_link" />
+    </joint>
+
+    <link name="square5x7_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x7_joint" type="fixed">
+        <origin xyz="0.6 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x7_link" />
+    </joint>
+
+    <link name="square5x8_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x8_joint" type="fixed">
+        <origin xyz="0.7 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x8_link" />
+    </joint>
+
+    <link name="square5x9_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square5x9_joint" type="fixed">
+        <origin xyz="0.8 0.4 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square5x9_link" />
+    </joint>
+
+
+    <link name="square6x1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x1_joint" type="fixed">
+        <origin xyz="0.0 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x1_link" />
+    </joint>
+
+    <link name="square6x2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x2_joint" type="fixed">
+        <origin xyz="0.1 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x2_link" />
+    </joint>
+
+    <link name="square6x3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x3_joint" type="fixed">
+        <origin xyz="0.2 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x3_link" />
+    </joint>
+
+    <link name="square6x4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x4_joint" type="fixed">
+        <origin xyz="0.3 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x4_link" />
+    </joint>
+
+    <link name="square6x5_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x5_joint" type="fixed">
+        <origin xyz="0.4 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x5_link" />
+    </joint>
+
+    <link name="square6x6_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x6_joint" type="fixed">
+        <origin xyz="0.5 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x6_link" />
+    </joint>
+
+    <link name="square6x7_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x7_joint" type="fixed">
+        <origin xyz="0.6 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x7_link" />
+    </joint>
+
+    <link name="square6x8_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x8_joint" type="fixed">
+        <origin xyz="0.7 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x8_link" />
+    </joint>
+
+    <link name="square6x9_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square6x9_joint" type="fixed">
+        <origin xyz="0.8 0.5 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square6x9_link" />
+    </joint>
+
+
+    <link name="square7x1_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x1_joint" type="fixed">
+        <origin xyz="0.0 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x1_link" />
+    </joint>
+
+    <link name="square7x2_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x2_joint" type="fixed">
+        <origin xyz="0.1 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x2_link" />
+    </joint>
+
+    <link name="square7x3_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x3_joint" type="fixed">
+        <origin xyz="0.2 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x3_link" />
+    </joint>
+
+    <link name="square7x4_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x4_joint" type="fixed">
+        <origin xyz="0.3 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x4_link" />
+    </joint>
+
+    <link name="square7x5_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x5_joint" type="fixed">
+        <origin xyz="0.4 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x5_link" />
+    </joint>
+
+    <link name="square7x6_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x6_joint" type="fixed">
+        <origin xyz="0.5 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x6_link" />
+    </joint>
+
+    <link name="square7x7_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x7_joint" type="fixed">
+        <origin xyz="0.6 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x7_link" />
+    </joint>
+
+    <link name="square7x8_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="white" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x8_joint" type="fixed">
+        <origin xyz="0.7 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x8_link" />
+    </joint>
+
+    <link name="square7x9_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.1 0.1 0.01" />
+            </geometry>
+            <material name="black" />
+        </visual>
+        <inertial>
+            <mass value="1.0"/>
+            <origin xyz="0 0 0"/>
+            <inertia ixx="0.6022" ixy="-0.02364" ixz="-0.1197" iyy="1.7386" iyz="-0.001544" izz="2.0296"/>
+        </inertial>
+    </link>
+
+    <joint name="square7x9_joint" type="fixed">
+        <origin xyz="0.8 0.6 0" rpy="0 0 0" />
+        <parent link="grid8x6" />
+        <child link="square7x9_link" />
+    </joint>
+</robot>
